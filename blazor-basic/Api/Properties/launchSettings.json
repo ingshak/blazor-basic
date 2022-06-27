@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "BlazorBasic.Api": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "httpPort": 32752,
+      "useSSL": false
+    }
+  }
+}
