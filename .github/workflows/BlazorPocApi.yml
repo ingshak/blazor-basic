@@ -3,6 +3,8 @@ on:
   push:
     branches:
     - main
+    paths:
+      - blazor-basic/Api/**
 env:
   AZURE_FUNCTIONAPP_NAME: BlazorPocApi
   AZURE_FUNCTIONAPP_PACKAGE_PATH: blazor-basic/Api/publish
