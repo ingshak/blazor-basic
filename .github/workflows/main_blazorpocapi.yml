@@ -7,9 +7,12 @@ on:
   push:
     branches:
       - main
+    paths:
+      - Api/**
   workflow_dispatch:
 
 env:
+  AZURE_FUNCTIONAPP_NAME: 'BlazorPocApi'
   AZURE_FUNCTIONAPP_PACKAGE_PATH: 'blazor-basic/Api' # set this to the path to your web app project, defaults to the repository root
   DOTNET_VERSION: '6.0.x' # set this to the dotnet version to use
 
@@ -18,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout GitHub Action'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup DotNet ${{ env.DOTNET_VERSION }} Environment
         uses: actions/setup-dotnet@v1
